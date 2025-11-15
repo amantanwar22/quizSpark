@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Spark SQL Quiz</title>
+  <style>
+    body {
+      background:black;
+      color:green;
+      font-family: Arial;
+      padding:15px;
+    }
+    .question {
+      margin-bottom: 30px;
+      padding:10px;
+      border:1px solid green;
+      border-radius:6px;
+    }
+    .option {
+      display:block;
+      margin:4px 0;
+      padding:6px;
+      border:1px solid green;
+      background:transparent;
+      color:inherit;
+      cursor:pointer;
+      width:200px;
+      text-align:left;
+      border-radius:4px;
+    }
+    .option.disabled {
+      pointer-events:none;
+      opacity:0.5;
+    }
+    #more-btn {
+      padding:10px 14px;
+      border:1px solid green;
+      background:transparent;
+      color:green;
+      cursor:pointer;
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Spark SQL Quiz</h1>
+
+  <div id="quiz-container"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
+
