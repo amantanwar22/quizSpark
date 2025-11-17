@@ -2546,10 +2546,17 @@ $(document).on("click", ".option", function () {
   const correct = qDiv.data("correct");
   const code = qDiv.data("code");
 
-  qDiv.find(".option").addClass("disabled");//diabled the options now as work is done
+  qDiv.find(".option").addClass("disabled");
 
   
-  const scoreText =clicked === correct? `(${code}, +20)`: `(${code}, -5)`;
+  let scoreText = "";
+  if(clicked===correct){
+    scoreText = `(${code}, +20)`;
+  }
+  else{
+    const correctOptionText = qDiv.find(`[data-answer='${correct}']`).text();
+    scoreText = `(${code}, -5) | Correct answer: ${correctOptionText}`;
+  }
 
   qDiv.find(".answer-display").text(scoreText);
 });
